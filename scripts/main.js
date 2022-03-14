@@ -1,10 +1,15 @@
-let person = prompt("Name");
-alert (`${person} welcome, we will now calculate the value of your crypto portfolio in USD`);
-let btc = prompt("Enter the amount of BTC you own");
-let eth = prompt("Enter the amount of ETH you own");
-let btcToUSD = btc * 40000
-let ethToUSD = eth * 2500
-document.write (`${btc} BTC in your portfolio has a value of $${btcToUSD} USD</br>`);
-document.write (`${eth} ETH in your portfolio has a value of $${ethToUSD} USD</br>`);
-let portfolio = ethToUSD + btcToUSD
-document.write (`Your full portfolio is worth $${portfolio} USD`);
+let person = prompt("Ingresa tu nombre");
+alert (`${person} bienvenido, evaluaremos si el valor de tus BTC es mayor a 1 millón de USD`);
+
+portfolio = 0
+
+while (portfolio<=1000000) {
+    let btc = prompt(`ingresa la cantidad de BTC que tienes`)
+    portfolio = btc*40000
+    if (portfolio>=1000000) {
+        document.write (`${person} tienes mas de un millón de USD. </br> El valor de tu portafolio es de ${portfolio} USD.`)
+    }
+    else {
+        alert(`intentalo con una cantidad más grande`)
+    }
+}
